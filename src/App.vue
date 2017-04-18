@@ -1,4 +1,4 @@
-<!--suppress ALL -->
+
 <template>
   <div id="app">
     <div class="wrapper">
@@ -81,25 +81,10 @@ import store from "./store"
         var index = this.items.indexOf(item);
         this.items.splice(index, 1);
       },
-      editItem:function (item) {
-       this.beforeEditCache = item.title;
-        this.editedTodo = item;
-      },
-      doneEdit: function (item) {
-        if (!this.editedTodo) {
-          return;
-        }
-        this.editedTodo = null;
-        item.title = item.title.trim();
-        if (!item.title) {
-          this.removeTodo(item);
-        }
-      },
+    
+    
 
-      cancelEdit: function (todo) {
-        this.editedTodo = null;
-        todo.title = this.beforeEditCache;
-      },
+     
     }
 
   }
